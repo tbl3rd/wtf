@@ -1,17 +1,17 @@
 # wtf
 
 A tiny DSL in C to parse and validate complicated options
-such as the device (,) stream (:) specifiers in ffmpeg.
+such as the device (`,`) stream (`:`) specifiers in `ffmpeg`.
 
-Parse arg according to spec and the vc validators at vv.
-Return 1 if all the validators wrote their outs.
-Otherwise complain to av0 and return 0.
+Parse `arg` according to `.spec` and the `vc` validators at `vv`.
+Return `1` if all the validators wrote their outs.
+Otherwise complain as `av0` and return `0`.
 
-(spec+1) is a string of fields in arg divided by *spec.
+`(spec+1)` is a string of fields in `arg` divided by `*spec`.
 
-Example: The following code parses arg on '-'s into f, n, and u,
-         describing them as "filename", "count", and "uuid" in
-         error messages from "wtf" whenever there's a problem.
+Example: The following code parses arg on '`-`'s into `f`, `n`, and `u`,
+         describing them as `"filename"`, `"count"`, and `"uuid"` in
+         error messages from `"wtf"` whenever there's a problem.
 
 ```
     char f[PATH_MAX]; long n; uuid_t u;
